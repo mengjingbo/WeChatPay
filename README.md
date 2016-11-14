@@ -10,6 +10,8 @@ https://pay.weixin.qq.com/wiki/doc/api/app/app.php?chapter=9_1
 
 >按照以上要求配置信息得到商户Id，在商户平台生成的密钥，AppId，AppSecret。
 
+- 导入微信支付SDK，加入所需权限。
+
 一般将这些信息写在一个常量类里面方便维护，如下：
 ```java
    /**
