@@ -142,7 +142,7 @@ https://pay.weixin.qq.com/wiki/doc/api/app/app.php?chapter=9_1
             packageParams.add(new WeChatPayBean("nonce_str", nonceString));// 随机字符串
             packageParams.add(new WeChatPayBean("notify_url", WeChatConstants.WECHAT_RESULT_NOTIFY ));// 微信回调服务端地址
             packageParams.add(new WeChatPayBean("out_trade_no", "支付订单号"));// 服务端返回的支付订单号
-            packageParams.add(new WeChatPayBean("spbill_create_ip", AppUtils.getPhoneIP(AppContext.instance)));
+            packageParams.add(new WeChatPayBean("spbill_create_ip", "设备IP"));// 设备IP，当前设备IP，默认为“WEB”
             packageParams.add(new WeChatPayBean("total_fee", "订单金额"));// 订单总金额，单位为分。根据商户商品价格定义，此处需自行设置
             packageParams.add(new WeChatPayBean("trade_type", "APP"));// 交易类型
             packageParams.add(new WeChatPayBean("sign", getAppSign(packageParams)));// 签名，方法在本贴下面
@@ -190,6 +190,7 @@ https://pay.weixin.qq.com/wiki/doc/api/app/app.php?chapter=9_1
    }
 ```
 - 签名
+
 >签名规范文档:https://pay.weixin.qq.com/wiki/doc/api/app/app.php?chapter=4_3
 
 ```java
