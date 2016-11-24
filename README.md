@@ -1,12 +1,9 @@
 # WeChatPay
 Android微信支付
 #### 1.阅读文档，配置信息
-- 移动应用微信支付商户接入指导文档(按照微信需求填写信息,申请商户ID):
-https://open.weixin.qq.com/cgi-bin/showdocument?action=dir_list&t=resource/res_list&verify=1&id=open1419317780&token=&lang=zh_CN
-- 开发文档:
-https://pay.weixin.qq.com/wiki/doc/api/app/app.php?chapter=9_1
-- 开发工具包和SDK下载：
- https://open.weixin.qq.com/cgi-bin/showdocument?action=dir_list&t=resource/res_list&verify=1&id=open1419319167&lang=zh_CN
+- [移动应用微信支付商户接入指导文档(按照微信需求填写信息,申请商户ID)](https://open.weixin.qq.com/cgi-bin/showdocument?action=dir_list&t=resource/res_list&verify=1&id=open1419317780&token=&lang=zh_CN)
+- [开发文档](https://pay.weixin.qq.com/wiki/doc/api/app/app.php?chapter=9_1)
+- [开发工具包和SDK下载](https://open.weixin.qq.com/cgi-bin/showdocument?action=dir_list&t=resource/res_list&verify=1&id=open1419319167&lang=zh_CN)
 
 >按照以上要求配置信息得到商户Id，在商户平台生成的密钥，AppId，AppSecret。
 
@@ -72,7 +69,7 @@ https://pay.weixin.qq.com/wiki/doc/api/app/app.php?chapter=9_1
 > 首先商户系统先调用该接口在微信支付服务后台生成预支付交易单，返回正确的预支付交易回话标识后再在APP里面调起支付。也就是说服务端调用该接口从微信那边获得一个与支付订单号。
 
 - 使用AsyncTask获取订单信息
-- 微信支付统一下单接口地址:https://api.mch.weixin.qq.com/pay/unifiedorder
+- 微信支付统一下单接口地址:```https://api.mch.weixin.qq.com/pay/unifiedorder```
 
 ```java
     private Map<String, String> mResult ;// 定义一个Map集合，用来接收得到的订单信息
@@ -193,7 +190,7 @@ https://pay.weixin.qq.com/wiki/doc/api/app/app.php?chapter=9_1
 ```
 - 签名
 
->签名规范文档:https://pay.weixin.qq.com/wiki/doc/api/app/app.php?chapter=4_3
+>[签名规范文档](https://pay.weixin.qq.com/wiki/doc/api/app/app.php?chapter=4_3)
 
 ```java
     private String getAppSign(List<PayBean> params) {
